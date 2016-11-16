@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>测试</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<style>
+*{margin:0; padding:0; list-style: none;}
+body{
+	background: black;
+}
+div{
+	width: 105px;
+	height: 150px;
+	margin:100px auto;
+	-webkit-perspective: 1000px;
+	-webkit-perspective-origin: center center;
+}
+ul{
+	width: 105px;
+	height: 150px;
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform:rotateX(-16deg) rotateY(0deg) rotateZ(0deg);
+	-webkit-animation:run 10s 1s linear infinite;
+}
+@-webkit-keyframes run{
+	from{-webkit-transform:rotateX(-16deg) rotateY(0deg) rotateZ(0deg);}
+	to{-webkit-transform:rotateX(-16deg) rotateY(360deg) rotateZ(0deg);}
+}
+ul li{width: 105px; height: 150px; position: absolute; -webkit-background-size:100% 100%;}
+ul li:nth-child(1){
+	background-image: url(images/01.jpg);
+	-webkit-transform: translateZ(200px);
+}
+ul li:nth-child(2){
+	background-image: url(images/02.jpg);
+	-webkit-transform:rotateY(30deg) translateZ(200px);
+}
+ul li:nth-child(3){
+	background-image: url(images/03.jpg);
+	-webkit-transform:rotateY(60deg) translateZ(200px);
+}
+ul li:nth-child(4){
+	background-image: url(images/04.jpg);
+	-webkit-transform:rotateY(90deg) translateZ(200px);
+}
+ul li:nth-child(5){
+	background-image: url(images/05.jpg);
+	-webkit-transform:rotateY(120deg) translateZ(200px);
+}
+ul li:nth-child(6){
+	background-image: url(images/06.jpg);
+	-webkit-transform:rotateY(150deg) translateZ(200px);
+}
+ul li:nth-child(7){
+	background-image: url(images/07.jpg);
+	-webkit-transform:rotateY(180deg) translateZ(200px);
+}
+ul li:nth-child(8){
+	background-image: url(images/08.jpg);
+	-webkit-transform:rotateY(210deg) translateZ(200px);
+}
+ul li:nth-child(9){
+	background-image: url(images/09.jpg);
+	-webkit-transform:rotateY(240deg) translateZ(200px);
+}
+ul li:nth-child(10){
+	background-image: url(images/10.jpg);
+	-webkit-transform:rotateY(270deg) translateZ(200px);
+}
+ul li:nth-child(11){
+	background-image: url(images/11.jpg);
+	-webkit-transform:rotateY(300deg) translateZ(200px);
+}
+ul li:nth-child(12){
+	background-image: url(images/12.jpg);
+	-webkit-transform:rotateY(330deg) translateZ(200px);
+}
+</style>
+</head>
+<body>
+<div>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+</body>
+</html>

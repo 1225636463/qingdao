@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{margin: 0;padding: 0;list-style:none; }
+	body{
+		background:url(img/bg.jpg);
+		background-size: cover;
+		perspective:1000px;
+		/*定义元素距离浏览器的距离*/ 
+		transform-style: preserve-3d;
+		}
+		.box{
+			width: 200px;
+			height: 200px;
+			position: relative;
+			transform-style:preserve-3d;
+			/*定义他的子元素以3d的效果进行变形 */
+			margin: 300px auto;
+			animation:move 5s linear infinite;
+	}
+	ul{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 200px;
+		height: 200px;
+		transform-style:preserve-3d;
+		transform: rotateY(-30deg);
+	}
+	ul li{
+		width: 200px;
+		height: 200px;
+		background: white;
+		opacity: 0.5;
+		/*定义透明度*/
+		position: absolute;
+		left: 0;
+		top: 0;
+		transition:all 2s linear; 
+	}
+	ul li:nth-child(1){
+		transform:translateZ(100px);
+	}
+	ul li:nth-child(2){
+		transform:translateZ(-100px);
+	}
+	ul li:nth-child(3){
+		transform:rotateY(90deg) translateZ(100px);
+	}
+	ul li:nth-child(4){
+		transform:rotateY(90deg) translateZ(-100px);
+	}	
+	ul li:nth-child(5){
+		transform:rotateX(90deg) translateZ(100px);
+	}
+	ul li:nth-child(6){
+		transform:rotateX(90deg) translateZ(-100px);
+	}
+	ol{
+		position: absolute;
+		left: 50px;
+		top: 50px;
+		width: 100px;	
+		height: 100px;
+		transform:rotateY(-30deg);
+		transform-style:preserve-3d;  
+	}
+	ol li{
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	ol li:nth-child(1){
+		transform:translateZ(50px);
+	}
+	ol li:nth-child(2){
+		transform:translateZ(-50px);
+	}
+	ol li:nth-child(3){
+		transform:rotateY(90deg)translateZ(50px);
+	}
+	ol li:nth-child(4){
+		transform:rotateY(90deg)translateZ(-50px);
+	}
+	ol li:nth-child(5){
+		transform:rotateX(90deg)translateZ(50px);
+	}
+	ol li:nth-child(6){
+		transform:rotateX(90deg)translateZ(-50px);
+	}
+	.box:hover ul li:nth-child(1){
+		transform:translateZ(300px); 
+	}
+	.box:hover ul li:nth-child(2){
+		transform:translateZ(-300px); 
+	}
+	.box:hover ul li:nth-child(3){
+		transform:rotateY(90deg)translateZ(300px); 
+	}
+	.box:hover ul li:nth-child(4){
+		transform:rotateY(90deg)translateZ(-300px); 
+	}
+	.box:hover ul li:nth-child(5){
+		transform:rotateX(90deg)translateZ(300px); 
+	}
+	.box:hover ul li:nth-child(6){
+		transform:rotateX(90deg)translateZ(-300px); 
+	}
+	@keyframes move{
+		0%{transform:rotateY(0deg);}
+		100%{transform:rotateY(360deg);}
+	}
+	</style>
+</head>
+<body>
+	 <div class="box" >
+	 	<ul>	 	
+	 	<li></li>
+	 	<li></li>
+	 	<li></li>
+	 	<li></li>
+	 	<li></li>
+	 	<li></li>
+	 	</ul>
+	 	<ol>
+	 		<li><img src="img/01.png" alt=""></li>
+			<li><img src="img/02.png" alt=""></li>
+			<li><img src="img/03.png" alt=""></li>
+			<li><img src="img/04.png" alt=""></li>
+			<li><img src="img/05.png" alt=""></li>
+			<li><img src="img/06.png" alt=""></li>
+	 	</ol>
+	 </div>
+</body>
+</html>
